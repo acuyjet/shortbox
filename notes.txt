@@ -1,5 +1,0 @@
-created Books.cs
-created Issues.cs
-added issues and series controllers
-
-views needed: home (login), collection, add, edit/delete
