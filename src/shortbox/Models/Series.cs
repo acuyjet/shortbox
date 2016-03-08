@@ -19,3 +19,4 @@ namespace shortbox.Models
         public virtual ICollection<Issues> Issues { get; set; }
     }
 }
+ 

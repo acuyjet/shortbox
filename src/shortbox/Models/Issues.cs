@@ -9,6 +9,7 @@ namespace shortbox.Models
 {
     public class Issues
     {
+        [Key]
         [ScaffoldColumn(false)]
         public int IssueId { get; set; }
 
@@ -34,6 +35,9 @@ namespace shortbox.Models
         public string Colorist { get; set; }
 
         public string Letterer { get; set; }
+
+        [ScaffoldColumn(false)]
+        public string SeriesId { get; set; }
 
         //Navigation property
         public virtual Series Series { get; set; }
