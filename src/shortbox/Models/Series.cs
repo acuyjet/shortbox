@@ -16,7 +16,6 @@ namespace shortbox.Models
 
         public string Publisher { get; set; }
 
-        public virtual ICollection<Issues> Issues { get; set; }
+        public virtual ICollection<Issue> Issues { get; set; }
     }
 }
- 

@@ -17,7 +17,7 @@ namespace shortbox.Models
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
-        public DbSet<Issues> Issues { get; set; }
+        public DbSet<Issue> Issue { get; set; }
         public DbSet<Series> Series { get; set; }
     }
 }

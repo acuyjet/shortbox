@@ -18,7 +18,7 @@ namespace shortbox.Controllers
         // GET: Issues
         public IActionResult Index()
         {
-            return View(_context.Issues.ToList());
+            return View(_context.Issue.ToList());
         }
 
         // GET: Issues/Details/5
@@ -29,7 +29,7 @@ namespace shortbox.Controllers
                 return HttpNotFound();
             }
 
-            Issues issues = _context.Issues.Single(m => m.IssueId == id);
+            Issue issues = _context.Issue.Single(m => m.IssueId == id);
             if (issues == null)
             {
                 return HttpNotFound();
@@ -47,11 +47,11 @@ namespace shortbox.Controllers
         // POST: Issues/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Issues issues)
+        public IActionResult Create(Issue issues)
         {
             if (ModelState.IsValid)
             {
-                _context.Issues.Add(issues);
+                _context.Issue.Add(issues);
                 _context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace shortbox.Controllers
                 return HttpNotFound();
             }
 
-            Issues issues = _context.Issues.Single(m => m.IssueId == id);
+            Issue issues = _context.Issue.Single(m => m.IssueId == id);
             if (issues == null)
             {
                 return HttpNotFound();
@@ -77,7 +77,7 @@ namespace shortbox.Controllers
         // POST: Issues/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Issues issues)
+        public IActionResult Edit(Issue issues)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace shortbox.Controllers
                 return HttpNotFound();
             }
 
-            Issues issues = _context.Issues.Single(m => m.IssueId == id);
+            Issue issues = _context.Issue.Single(m => m.IssueId == id);
             if (issues == null)
             {
                 return HttpNotFound();
@@ -111,8 +111,8 @@ namespace shortbox.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeleteConfirmed(int id)
         {
-            Issues issues = _context.Issues.Single(m => m.IssueId == id);
-            _context.Issues.Remove(issues);
+            Issue issues = _context.Issue.Single(m => m.IssueId == id);
+            _context.Issue.Remove(issues);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

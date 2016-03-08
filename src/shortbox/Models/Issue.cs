@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace shortbox.Models
 {
-    public class Issues
+    public class Issue
     {
         [Key]
         [ScaffoldColumn(false)]
@@ -20,8 +20,6 @@ namespace shortbox.Models
         [Required]
         [Display(Name = "Issue #")]
         public string IssueNumber { get; set; }
-
-        public string Publisher { get; set; }
 
         [Display(Name="Story Arc")]
         public string StoryArc { get; set; }
