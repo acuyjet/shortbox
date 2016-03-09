@@ -17,8 +17,26 @@ textarea {
     max-width: 280px;
 }
 
+/* Jumbotron */
+.jumbotron {
+    background: url('../images/vector_halftone_texture_1.png') no-repeat center;
+    background-size: cover;
+    background-color: #FFDA73;
+    text-align: center;
+    text-shadow: 1px 1px 1px #999;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #5287AA;
+}
+
+    .navbar.navbar-default.navbar-fixed-top a {
+        color: #fff;
+    }
+
 /* Carousel */
-.carousel-caption {
+/*.carousel-caption {
     z-index: 10 !important;
 }
 
@@ -31,4 +49,4 @@ textarea {
     .carousel-caption {
         z-index: 10 !important;
     }
-}
+}*/
