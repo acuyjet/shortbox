@@ -26,7 +26,7 @@ namespace shortbox.Models
         
         public string Writer { get; set; }
 
-        public string Artist { get; set; }
+        public string Penciller { get; set; }
 
         public string Inker { get; set; }
 
