@@ -5,9 +5,9 @@
 
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
-.body-content.container {
-    padding-left: 15px;
-    padding-right: 15px;
+.body-content {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /*.container {
