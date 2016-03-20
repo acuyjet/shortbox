@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,21 +7,14 @@ namespace shortbox.Models
 {
     public class Issue
     {
-        [Key]
-        [ScaffoldColumn(false)]
-        public int IssueId { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        [Display(Name = "Series")]
         public string SeriesName { get; set; }
 
-        [Required]
-        [Display(Name = "Issue #")]
         public string IssueNumber { get; set; }
 
-        [Display(Name="Story Arc")]
         public string StoryArc { get; set; }
-        
+
         public string Writer { get; set; }
 
         public string Penciller { get; set; }
@@ -33,12 +24,6 @@ namespace shortbox.Models
         public string Colorist { get; set; }
 
         public string Letterer { get; set; }
-
-        [ScaffoldColumn(false)]
-        public string SeriesId { get; set; }
-
-        //Navigation property
-        public virtual Series Series { get; set; }
 
     }
 }

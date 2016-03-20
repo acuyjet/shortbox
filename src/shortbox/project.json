@@ -1,5 +1,5 @@
 ﻿{
-  "userSecretsId": "aspnet5-shortbox-dd28899d-e156-48b2-a3f9-8c96039cc151",
+  "userSecretsId": "aspnet5-shortbox-1c2606ee-4d75-41f1-b2e5-3025844f62e8",
   "version": "1.0.0-*",
   "compilationOptions": {
     "emitEntryPoint": true
@@ -24,8 +24,7 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
-    "Microsoft.Extensions.DependencyInjection": "1.0.0-rc1-final"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final"
   },
 
   "commands": {

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
-using shortbox.Models;
 
 namespace shortbox.Models
 {
@@ -17,7 +16,5 @@ namespace shortbox.Models
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
         }
-        public DbSet<Issue> Issue { get; set; }
-        public DbSet<Series> Series { get; set; }
     }
 }
