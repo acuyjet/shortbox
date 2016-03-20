@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
@@ -13,7 +16,7 @@ namespace shortbox.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-rc1-16348")
+                .HasAnnotation("ProductVersion", "7.0.0-beta8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRole", b =>
@@ -46,8 +49,7 @@ namespace shortbox.Migrations
 
                     b.Property<string>("ClaimValue");
 
-                    b.Property<string>("RoleId")
-                        .IsRequired();
+                    b.Property<string>("RoleId");
 
                     b.HasKey("Id");
 
@@ -63,8 +65,7 @@ namespace shortbox.Migrations
 
                     b.Property<string>("ClaimValue");
 
-                    b.Property<string>("UserId")
-                        .IsRequired();
+                    b.Property<string>("UserId");
 
                     b.HasKey("Id");
 
@@ -79,8 +80,7 @@ namespace shortbox.Migrations
 
                     b.Property<string>("ProviderDisplayName");
 
-                    b.Property<string>("UserId")
-                        .IsRequired();
+                    b.Property<string>("UserId");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -146,49 +146,6 @@ namespace shortbox.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUsers");
                 });
 
-            modelBuilder.Entity("shortbox.Models.Issue", b =>
-                {
-                    b.Property<int>("IssueId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Artist");
-
-                    b.Property<string>("Colorist");
-
-                    b.Property<string>("Inker");
-
-                    b.Property<string>("IssueNumber")
-                        .IsRequired();
-
-                    b.Property<string>("Letterer");
-
-                    b.Property<string>("SeriesId");
-
-                    b.Property<string>("SeriesName")
-                        .IsRequired();
-
-                    b.Property<int?>("SeriesSeriesId");
-
-                    b.Property<string>("StoryArc");
-
-                    b.Property<string>("Writer");
-
-                    b.HasKey("IssueId");
-                });
-
-            modelBuilder.Entity("shortbox.Models.Series", b =>
-                {
-                    b.Property<int>("SeriesId")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Publisher");
-
-                    b.Property<string>("Title")
-                        .IsRequired();
-
-                    b.HasKey("SeriesId");
-                });
-
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNet.Identity.EntityFramework.IdentityRole")
@@ -219,13 +176,6 @@ namespace shortbox.Migrations
                     b.HasOne("shortbox.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("shortbox.Models.Issue", b =>
-                {
-                    b.HasOne("shortbox.Models.Series")
-                        .WithMany()
-                        .HasForeignKey("SeriesSeriesId");
                 });
         }
     }

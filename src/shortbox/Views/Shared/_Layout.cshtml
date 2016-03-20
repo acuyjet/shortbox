@@ -30,7 +30,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    @*<li><a asp-controller="Collection" asp-action="Index">Collection</a></li>*@
                     <li><a asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
@@ -38,14 +38,14 @@
             </div>
         </div>
     </div>
-    
-        
-            <div class="jumbotron">
-                <div class="container">
-                    <h1>shortbox</h1>
-                    @*<p>Bag and board your comics</p>*@
-                </div>
-            </div>    
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>shortbox</h1>
+            @*<p>Bag and board your comics</p>*@
+        </div>
+    </div>
     <div class="body-content">
         @RenderBody()
 
