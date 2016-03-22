@@ -3,6 +3,7 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using shortbox.Models;
+using System;
 
 namespace shortbox.Controllers
 {
@@ -12,13 +13,21 @@ namespace shortbox.Controllers
 
         public IssuesController(ApplicationDbContext context)
         {
-            _context = context;    
+            _context = context;
         }
 
         // GET: Issues
-        public IActionResult Index()
+        public IActionResult Index(string searchString)
         {
-            return View(_context.Issue.ToList());
+
+            var issues = from m in _context.Issue
+                         select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                issues = issues.Where(s => s.SeriesName.Contains(searchString) || s.IssueNumber.Contains(searchString) || s.StoryArc.Contains(searchString) || s.Writer.Contains(searchString) || s.Penciller.Contains(searchString) || s.Inker.Contains(searchString) || s.Colorist.Contains(searchString) || s.Letterer.Contains(searchString));
+            }
+
+            return View(issues);
         }
 
         // GET: Issues/Details/5
