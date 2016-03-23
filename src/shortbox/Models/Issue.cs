@@ -10,14 +10,17 @@ namespace shortbox.Models
     {
         public int Id { get; set; }
 
+        [Required]
         [Display(Name = "Series Name")]
         public string SeriesName { get; set; }
 
+        [Required]
+        [RegularExpression(@"[0 - 9]*\w+")]
         [Display(Name = "Issue Number")]
         public string IssueNumber { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MMMM yyyy}")]
+        [DisplayFormat(DataFormatString = "{0:MMMM yyyy}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Date (Month and Year)")]
         public DateTime Date { get; set; }
 
         [Display(Name = "Story Arc")]
