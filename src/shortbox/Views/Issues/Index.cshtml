@@ -27,6 +27,9 @@
             @Html.DisplayNameFor(model => model.IssueNumber)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.StoryArc)
         </th>
         <th>
@@ -34,6 +37,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Penciller)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoverArtist)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Inker)
@@ -44,10 +50,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Letterer)
         </th>
-
-
-
-
         <th></th>
     </tr>
 
@@ -61,6 +63,9 @@
                 @Html.DisplayFor(modelItem => item.IssueNumber)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.StoryArc)
             </td>
             <td>
@@ -68,6 +73,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Penciller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CoverArtist)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Inker)

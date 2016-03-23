@@ -10,11 +10,15 @@ namespace shortbox.Models
     {
         public int Id { get; set; }
 
-        [Display(Name ="Series Name")]
+        [Display(Name = "Series Name")]
         public string SeriesName { get; set; }
 
         [Display(Name = "Issue Number")]
         public string IssueNumber { get; set; }
+
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MMMM yyyy}")]
+        public DateTime Date { get; set; }
 
         [Display(Name = "Story Arc")]
         public string StoryArc { get; set; }
@@ -23,11 +27,13 @@ namespace shortbox.Models
 
         public string Penciller { get; set; }
 
+        [Display(Name = "Cover Artist")]
+        public string CoverArtist { get; set; }
+
         public string Inker { get; set; }
 
         public string Colorist { get; set; }
 
         public string Letterer { get; set; }
-
     }
 }

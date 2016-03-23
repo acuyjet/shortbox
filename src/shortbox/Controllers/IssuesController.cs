@@ -56,7 +56,7 @@ namespace shortbox.Controllers
         // POST: Issues/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create([Bind("Id, SeriesName, IssueNumber, StoryArc, Writer, Penciller, Inker, Colorist, Letterer")]Issue issue)
+        public IActionResult Create([Bind("Id, SeriesName, IssueNumber, Date, StoryArc, Writer, Penciller, CoverArtist, Inker, Colorist, Letterer")]Issue issue)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace shortbox.Controllers
         // POST: Issues/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("Id, SeriesName, IssueNumber, StoryArc, Writer, Penciller, Inker, Colorist, Letterer")] Issue issue)
+        public IActionResult Edit([Bind("Id, SeriesName, IssueNumber, Date, StoryArc, Writer, Penciller, CoverArtist, Inker, Colorist, Letterer")] Issue issue)
         {
             if (ModelState.IsValid)
             {
@@ -118,7 +118,7 @@ namespace shortbox.Controllers
         // POST: Issues/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed([Bind("Id, SeriesName, IssueNumber, StoryArc, Writer, Penciller, Inker, Colorist, Letterer")]int id)
+        public IActionResult DeleteConfirmed([Bind("Id, SeriesName, IssueNumber, Date, StoryArc, Writer, Penciller, CoverArtist, Inker, Colorist, Letterer")]int id)
         {
             Issue issue = _context.Issue.Single(m => m.Id == id);
             _context.Issue.Remove(issue);

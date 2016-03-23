@@ -27,6 +27,13 @@
             </div>
         </div>
         <div class="form-group">
+            <label asp-for="Date" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="StoryArc" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="StoryArc" class="form-control" />
@@ -45,6 +52,13 @@
             <div class="col-md-10">
                 <input asp-for="Penciller" class="form-control" />
                 <span asp-validation-for="Penciller" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CoverArtist" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CoverArtist" class="form-control" />
+                <span asp-validation-for="CoverArtist" class="text-danger" />
             </div>
         </div>
         <div class="form-group">
@@ -68,10 +82,6 @@
                 <span asp-validation-for="Letterer" class="text-danger" />
             </div>
         </div>
-
-
-
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
