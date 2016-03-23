@@ -24,7 +24,7 @@ namespace shortbox.Controllers
                          select m;
             if (!String.IsNullOrEmpty(searchString))
             {
-                issues = issues.Where(s => s.SeriesName.Contains(searchString) || s.IssueNumber.Contains(searchString) || s.StoryArc.Contains(searchString) || s.Writer.Contains(searchString) || s.Penciller.Contains(searchString) || s.Inker.Contains(searchString) || s.Colorist.Contains(searchString) || s.Letterer.Contains(searchString));
+                issues = issues.Where(s => s.SeriesName.Contains(searchString) || s.IssueNumber.Contains(searchString) || s.StoryArc.Contains(searchString) || s.Writer.Contains(searchString) || s.Penciller.Contains(searchString) || s.Inker.Contains(searchString) || s.Colorist.Contains(searchString) || s.Letterer.Contains(searchString) || s.CoverArtist.Contains(searchString));
             }
 
             return View(issues);
