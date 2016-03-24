@@ -7,7 +7,7 @@ namespace shortbox.Models
 {
     public class Collection
     {
-        public int Id { get; set; }
+        public int CollectionId { get; set; }
 
         public int UserId { get; set; }
     }
