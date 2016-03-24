@@ -23,6 +23,8 @@ namespace shortbox.Models
         [Display(Name = "Date (Month and Year)")]
         public DateTime Date { get; set; }
 
+        public string Publisher { get; set; }
+
         [Display(Name = "Story Arc")]
         public string StoryArc { get; set; }
 
