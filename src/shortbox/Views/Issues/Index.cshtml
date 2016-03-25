@@ -1,13 +1,14 @@
 @model IEnumerable<shortbox.Models.Issue>
 
 @{
+    Layout = "_Layout";
     ViewData["Title"] = "Issues - ";
 }
 
-<h2>Issues</h2>
+<h2>My Collection</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Add New Issue</a>
 </p>
 
 <form asp-controller="Issues" asp-action="Index" method="get">

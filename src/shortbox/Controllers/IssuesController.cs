@@ -4,6 +4,7 @@ using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using shortbox.Models;
 using System;
+using Microsoft.AspNet.Authorization;
 
 namespace shortbox.Controllers
 {
@@ -16,6 +17,7 @@ namespace shortbox.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Issues
         public IActionResult Index(string searchString)
         {
@@ -24,7 +26,7 @@ namespace shortbox.Controllers
                          select m;
             if (!String.IsNullOrEmpty(searchString))
             {
-                issues = issues.Where(s => s.SeriesName.Contains(searchString) || s.IssueNumber.Contains(searchString) || s.StoryArc.Contains(searchString) || s.Writer.Contains(searchString) || s.Penciller.Contains(searchString) || s.Inker.Contains(searchString) || s.Colorist.Contains(searchString) || s.Letterer.Contains(searchString) || s.CoverArtist.Contains(searchString));
+                issues = issues.Where(s => s.SeriesName.Contains(searchString) || s.IssueNumber.Contains(searchString) || s.Publisher.Contains(searchString) ||s.StoryArc.Contains(searchString) || s.Writer.Contains(searchString) || s.Penciller.Contains(searchString) || s.Inker.Contains(searchString) || s.Colorist.Contains(searchString) || s.Letterer.Contains(searchString) || s.CoverArtist.Contains(searchString));
             }
 
             return View(issues);

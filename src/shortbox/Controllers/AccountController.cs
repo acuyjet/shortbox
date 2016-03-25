@@ -64,7 +64,8 @@ namespace shortbox.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation(1, "User logged in.");
-                    return RedirectToLocal(returnUrl);
+                    returnUrl = Request.Form["returnUrl"];
+                    return Redirect("../Issues");
                 }
                 if (result.RequiresTwoFactor)
                 {
