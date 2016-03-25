@@ -100,7 +100,7 @@ namespace shortbox
             });
 
             //Adding seed data initializer
-            SampleData.Initialize(app.ApplicationServices);
+            //SampleData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.
