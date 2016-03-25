@@ -11,12 +11,12 @@ namespace shortbox.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "Series Name")]
+        [Display(Name = "Series Name *")]
         public string SeriesName { get; set; }
 
         [Required]
         [RegularExpression(@"[0 - 9]*\w+")]
-        [Display(Name = "Issue Number")]
+        [Display(Name = "Issue Number *")]
         public string IssueNumber { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:MMMM yyyy}", ApplyFormatInEditMode = true)]
